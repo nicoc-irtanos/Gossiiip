@@ -5,4 +5,25 @@
 <p><%= id.anonymous_gossiper %></p>
 <a href="/">Revenir à l'index</a>
 <a href="<%= edit_gossip_path %>">Modifier</a>
+<%= link_to 'Clique pour détruire', @gossip, method: :delete %>
 </html>
+
+<p>Commentaires</p>
+<% Comment.find_by(gossip_id: params[:id]).to_a.each do |comment| %>
+<%= comment.content %>
+<% end %>
+
+<br>
+
+<%= form_tag url_for(''), method: "post" do %>
+<%= label_tag "Anonymous Commentor" %>
+<br>
+<%= text_field_tag :user %>
+<br>
+<%= label_tag "Content" %>
+<br>
+<%= text_area_tag :content %>
+<br>
+<%= submit_tag "Comment" %>
+
+<% end %>

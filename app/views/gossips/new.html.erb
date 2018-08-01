@@ -1,7 +1,7 @@
 <html>
   <body>
     <h1>Nouveau Gossip</h1>
-      <%= form_tag url_for('/gossips'), method: "post" do %>
+      <%= form_tag('/gossips/:id'), method: "post" do %>
       <%= label_tag "Anonymous Gossiper" %>
       <br>
       <%= text_field_tag :user %>

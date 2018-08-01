@@ -1,0 +1,8 @@
+<html>
+<h1>Index</h1>
+<% Gossip.all.to_a.each do |gossip| %>
+<%=link_to gossip.title, gossip %>
+<br>
+<% end %>
+<a href="gossips/new">Nouveau Gossip</a>
+</html>

@@ -1,0 +1,14 @@
+<h1>Modifier commentaire</h1>
+
+<%= form_tag url_for(''), method: "post" do %>
+<%= label_tag "Anonymous Commentor" %>
+<br>
+<%= text_field_tag :user %>
+<br>
+<%= label_tag "Content" %>
+<br>
+<%= text_area_tag :content %>
+<br>
+<%= submit_tag "Comment" %>
+
+<% end %>
