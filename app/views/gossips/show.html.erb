@@ -1,0 +1,8 @@
+<html>
+<% id = Gossip.find(params[:id]) %>
+<p><%= id.title %></p>
+<p><%= id.content %></p>
+<p><%= id.anonymous_gossiper %></p>
+<a href="/">Revenir à l'index</a>
+<a href="<%= edit_gossip_path %>">Modifier</a>
+</html>

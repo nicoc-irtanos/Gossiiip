@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <h1>Modifier Gossip</h1>
+      <%= form_tag url_for(gossip_path), method: "put" do %>
+      <%= label_tag "Anonymous Gossiper" %>
+      <br>
+      <%= text_field_tag :user %>
+      <br>
+      <%= label_tag "Title" %>
+      <br>
+      <%= text_field_tag :title %>
+      <br>
+      <%= label_tag "Content" %>
+      <br>
+      <%= text_area_tag :content %>
+      <br>
+      <%= submit_tag "New Gossip" %>
+
+      <% end %>
+  </body>
+</html>
